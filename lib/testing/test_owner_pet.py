@@ -71,12 +71,13 @@ def test_add_pet_checks_isinstance():
 
     Pet.all = []
 
-def test_get_sorted_pets():
-    """Test Owner class has method get_sorted_pets, sorting related pets by name"""
+def test_sorted_pets():
+    """Test Owner class has method sorted_pets, sorting related pets by name"""
     owner = Owner("John")
     pet1 = Pet("Fido", "dog", owner)
     pet2 = Pet("Clifford", "dog", owner)
     pet3 = Pet("Whiskers", "cat", owner)
     pet4 = Pet("Jerry", "reptile", owner)
     
-    assert owner.get_sorted_pets() == [pet2, pet1, pet4, pet3]
+    assert owner.sorted_pets() == [pet2, pet1, pet4, pet3]
+
